@@ -3,7 +3,7 @@ MovieActorsApp::Application.routes.draw do
   # first created -> highest priority.
 
   resources :movies
-
+  root :to => 'movies#index'
   
 
   # Sample of regular route:

@@ -1,0 +1,11 @@
+<%= form_tag movies_path do %>
+
+    <%= label_tag "movie[name]", 'Movie: ' %>
+    <%= text_field_tag "movie[name]" %>
+  <% 2.times do %> 
+    <%= label_tag "movie[actor][]", 'Actor: ' %>
+    <%= text_field_tag "movie[actor][]" %>
+  <% end %>
+
+  <%= submit_tag%>
+<% end %>
