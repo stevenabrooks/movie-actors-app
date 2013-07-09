@@ -13,11 +13,13 @@ class MoviesController < ApplicationController
   end
 
   def create
-    movie = Movie.create(:name => params[:movie][:name])
-    params[:movie][:actor].each do |actor|
-      movie.actors.build(:name => actor)
-    end
-    movie.save
+    # movie = Movie.create(:name => params[:movie][:name])
+    Movie.create(params[:movie])
+    # params[:movie][:actor].each do |actor|
+    #   movie.actors.build(:name => actor)
+    # end
+    # movie.save
+
     redirect_to movies_path
   end
 

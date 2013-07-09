@@ -3,8 +3,8 @@
     <%= label_tag "movie[name]", 'Movie: ' %>
     <%= text_field_tag "movie[name]" %> <br>
   <% 2.times do %> 
-    <%= label_tag "movie[actor][]", 'Actor: ' %>
-    <%= text_field_tag "movie[actor][]" %> <br>
+    <%= label_tag "movie[actors_to_add][]", 'Actor: ' %>
+    <%= text_field_tag "movie[actors_to_add][]" %> <br>
   <% end %>
 
   <%= submit_tag%>
